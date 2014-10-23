@@ -1,4 +1,4 @@
 kesintiVar
 ==========
 
-Bi read me atalım bari.
+Bi read me atalım bari. olaylar olaylar...
