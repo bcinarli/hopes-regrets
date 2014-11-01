@@ -4,7 +4,6 @@
     Properties
     ------------------------------------------- **/
 .my-properties {
-    @include prefixer(column-count, 2, webkit moz);
     margin: 0;
     padding: 0;
 }
@@ -15,8 +14,11 @@
 
 .property {
     position: relative;
+    float: left;
+    width: 40%;
     padding: $base-gutter;
-    margin-bottom: $base-gutter;
+    margin: 0 5% $base-gutter;
+    @include font-size(14px);
     list-style: none;
     text-align: center;
 }
@@ -59,5 +61,6 @@ input.property-input {
     bottom: 0;
     left: 0;
     @include dims(100%, 30px);
+    @include font-size(13px);
     text-align: center;
 }
