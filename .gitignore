@@ -1,13 +1,10 @@
 # Starting with
 \.*
+*.codekit
 
 # Package managers
 bower_components
 node_modules
 
-# Build
-public
-
-*.codekit
-
+# Logs
 npm-debug.log
