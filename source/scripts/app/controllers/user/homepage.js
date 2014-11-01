@@ -44,32 +44,45 @@
         };
 
         // Keep input states.
-        $scope.inputStates = [];
         $scope.model = {
-            cash    : null,
-            exchange: null,
-            gold    : null,
-            nyse    : null,
-            coffee  : null,
-            estate  : null
+            active      : null,
+            cash        : null,
+            gold        : null,
+            cocoa       : null,
+            exchange    : null,
+            nyse        : null,
+            estate      : null
         };
-        var modelMap = ["cash", "gold", "coffee", "exchange", "nyse", "estate"];
 
+        // Show input setting.
+        $scope.settings.showInput   = false;
+        $scope.settings.inputIndex  = 0;
+
+        // Model map with index.
+        var modelMap = [null, "cash", "gold", "cocoa", "exchange", "nyse", "estate"];
+
+        // Keep last clicked input.
         var lastClicked = 0;
+
         // Show input of element.
         $scope.toggleInput = function(inputNum){
-            $scope.inputBlur(lastClicked);
+            if($scope.settings.showInput) return;
+
             lastClicked = inputNum;
-            $scope.inputStates[inputNum] = !$scope.inputStates[inputNum];
+            $scope.settings.showInput = true;
+            $scope.settings.inputIndex = inputNum;
         };
 
-        // On input blur.
-        $scope.inputBlur = function(inputNum){
-            var value = $scope.model[modelMap[inputNum]];
-            if(value === 0 || typeof value === "undefined" || value === null){
-                $scope.inputStates[inputNum] = false;
-            }
+        $scope.closeInput = function(){
+            $scope.settings.showInput   = false;
+            $scope.settings.inputIndex  = 0;
+            $scope.model.active         = "";
         };
+
+        $scope.$watch('model.active', function(newV){
+            if(!$scope.settings.showInput) return;
+            $scope.model[modelMap[lastClicked]] = newV;
+        });
     };
 
     // Register controller.
