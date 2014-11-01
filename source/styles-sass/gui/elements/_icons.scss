@@ -1,0 +1,43 @@
+/* @author Bilal Cinarli */
+
+/** -------------------------------------------
+ 
+    ------------------------------------------- **/
+[class^="icon-"], [class*=" icon-"] {
+    font-family: 'elements';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-new-york:before {
+    content: "\e600";
+}
+.icon-coffeebean:before {
+    content: "\e601";
+}
+.icon-gold:before {
+    content: "\e602";
+}
+.icon-money:before {
+    content: "\f0d6";
+}
+.icon-dollar:before {
+    content: "\f155";
+}
+.icon-house:before {
+    content: "\e603";
+}
+.icon-chevron-left:before {
+    content: "\f053";
+}
+.icon-chevron-right:before {
+    content: "\f054";
+}

@@ -1,0 +1,38 @@
+/* @author Bilal Cinarli */
+
+/** -------------------------------------------
+    Properties
+    ------------------------------------------- **/
+.my-properties {
+    @include prefixer(column-count, 2, webkit);
+    padding: 0;
+}
+
+.properties-title {
+    color: #{map-get($colors, 'blue')};
+}
+
+.property {
+    position: relative;
+    padding: $base-gutter;
+    margin-bottom: $base-gutter;
+    list-style: none;
+    text-align: center;
+}
+
+.property-link {
+    color: #222;
+    text-decoration: none;
+
+    &:active + .property-input {
+        display: block;
+    }
+}
+
+.property-icon {
+    @include font-size(40px);
+}
+
+.property-input {
+    display: none;
+}
