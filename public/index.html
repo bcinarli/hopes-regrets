@@ -1,9 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="BenNeHaltEttim">
     <head lang="en">
         <meta charset="UTF-8">
-        <title></title>
+        <title>Ben Ne Halt Ettim</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="assets/styles/style.css" />
     </head>
-    <body>
+    <body ng-controller="bnheSystemCtrl">
+        <!-- Page Wrapper -->
+        <div id="wrapper" class="page-wrap">
+            <!-- Header -->
+            <div ng-include src="'assets/templates/layout/header.tpl'"></div>
+
+            <!-- Main Content -->
+            <div id="main" class="page-content" ng-class="{loading: settings.content_loading}">
+                <div ng-hide="settings.page_loading || settings.content_loading" ng-view></div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div ng-include src="'assets/templates/layout/footer.tpl'"></div>
+
+        <!-- App Script -->
+        <script src="assets/scripts/main.min.js"></script>
     </body>
 </html>
