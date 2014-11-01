@@ -69,21 +69,6 @@
     }
 }
 
-input.property-input {
-    display: none;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    @include dims(200px, 50px);
-    border: 10px solid rgba(0, 0, 0, .4);
-    margin: -25px 0 0 -100px;
-    border-radius: 5px;
-
-    .property-selected & {
-        display: block;
-    }
-}
-
 .property-amount {
     position: absolute;
     bottom: 0;
@@ -91,4 +76,46 @@ input.property-input {
     @include dims(100%, 30px);
     @include font-size(13px);
     text-align: center;
+}
+
+
+.property-amount-holder {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 99;
+    @include dims(300px, 60px);
+    padding: 8px;
+    margin: -60px 0 0 -150px;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, .3);
+
+    &.top-line {
+        margin-top: -200px;
+    }
+
+    &.middle-line {
+        margin-top: -120px;
+    }
+}
+
+.property-amount-submit {
+    position: absolute;
+    top: 110%;
+    left: 0;
+    @include dims(100%, 60px);
+    border-radius: 10px;
+    background-color: #{map-get($colors, 'blue')};
+    color: #fff;
+    line-height: 60px;
+    @include font-size(20px);
+    font-weight: bold;
+    text-align: center;
+}
+
+input.property-input {
+    @include dims(100%, 44px);
+    border: 0;
+    border-radius: 8px;
+    background: #fff;
 }
