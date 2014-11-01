@@ -18,6 +18,7 @@
         // General settings holder.
         $scope.settings = {
             page_loading    : false,
+            show_content    : false,
             content_loading : false
         };
 

@@ -17,8 +17,15 @@
         // Fake delay.
         $timeout(function(){
             // Redirect to main page.
-            $scope.settings.content_loading = false;
+            $scope.settings.content_loading = true;
         }, 500);
+
+        // Fake delay.
+        $timeout(function(){
+            // Redirect to main page.
+            $scope.settings.content_loading = false;
+            $scope.settings.show_content = true;
+        }, 1000);
 
         // Settings
         var pageCount = 3;

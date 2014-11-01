@@ -14,7 +14,7 @@
 
             <!-- Main Content -->
             <div id="main" class="page-content" ng-class="{'loading-view': settings.content_loading}">
-                <div ng-hide="settings.page_loading || settings.content_loading" ng-view></div>
+                <div ng-show="settings.show_content" ng-view></div>
             </div>
         </div>
 

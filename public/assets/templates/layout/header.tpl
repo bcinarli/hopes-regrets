@@ -1,4 +1,4 @@
-<header id="masthead" class="page-header">
+<header id="masthead" class="page-header" ng-class="{'loading': settings.page_loading}">
     <a ng-click="settings.currentPage = 1" class="navigate-day navigate-yesterday"><i class="icon-chevron-left"></i> Yesterday</a>
 
     <div class="profile">
