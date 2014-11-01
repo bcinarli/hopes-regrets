@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homepage</title>
+
+    <link href="./../assets/styles/style.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="wrapper" class="page-wrap">
+        <header id="masthead" class="page-header">
+            <div class="profile">
+                <a href="#" class="profile-link">
+                    <img src="./../assets/images/me.jpg" class="profile-photo" />
+                </a>
+            </div>
+        </header>
+
+        <div id="main" class="page-content">
+
+        </div>
+    </div>
+
+    <footer id="mastfoot" class="page-footer">
+
+    </footer>
+</body>
+</html>

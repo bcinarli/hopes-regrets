@@ -14,7 +14,7 @@
     "tests"
   ],
   "dependencies": {
-    "Melange": "~0.2.0-alpha",
+      "melange": ">=0.3.3",
     "jquery": "~2.1.1"
   }
 }

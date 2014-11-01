@@ -1,0 +1,24 @@
+/* @author Bilal Cinarli */
+
+/** -------------------------------------------
+    Skeleton
+    ------------------------------------------- **/
+body {
+
+}
+
+.page-wrap {
+    position: relative;
+}
+
+.page-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    background: #{map_get($colors, 'blue')};
+}
+
+.page-content {
+    border-top: 1px solid #fff;
+}
