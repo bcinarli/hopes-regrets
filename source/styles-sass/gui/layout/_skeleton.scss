@@ -3,10 +3,6 @@
 /** -------------------------------------------
     Skeleton
     ------------------------------------------- **/
-@mixin app-transition(){
-    @include transition(all $base-duration $base-easing);
-}
-
 .page-wrap {
     position: relative;
     min-height: 100%;
