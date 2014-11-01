@@ -6,6 +6,7 @@
 //@codekit-append "../../bower_components/angular-route/angular-route.js"
 //@codekit-append "../../bower_components/angular-touch/angular-touch.js"
 //@codekit-append "../../bower_components/lodash/dist/lodash.js"
+//@codekit-append "../../bower_components/chartjs/Chart.js"
 
 // App
 //@codekit-append "app/app.js"

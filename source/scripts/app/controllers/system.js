@@ -21,10 +21,19 @@
             content_loading : false
         };
 
+        // Callbacks
+        $scope.callbacks = {
+            swipeLeft : null,
+            swipeRight: null
+        };
+
         // Touch events.
-        $scope.tapScreen    = function(){  };
-        $scope.swipeLeft    = function(){  };
-        $scope.swipeRight   = function(){  };
+        $scope.swipeLeft    = function(){
+            typeof $scope.callbacks.swipeLeft === "function" && $scope.callbacks.swipeLeft();
+        };
+        $scope.swipeRight   = function(){
+            typeof $scope.callbacks.swipeRight === "function" && $scope.callbacks.swipeRight();
+        };
     };
 
     // Register controller.
