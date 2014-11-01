@@ -8,7 +8,9 @@
     top: 50%;
     left: 50%;
     @include dims(64px);
-    margin: -32px 0 0 -32px;
+    margin: -24px 0 0 -32px;
+    border: 3px solid #fff;
+    border-radius: 50%;
 }
 
 .profile-link {
@@ -16,7 +18,9 @@
 }
 
 .profile-photo {
-    @include dims(64px);
-    border: 3px solid #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include dims(58px);
     border-radius: 50%;
 }

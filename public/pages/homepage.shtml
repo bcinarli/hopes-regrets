@@ -24,11 +24,11 @@
         <div id="main" class="page-content">
             <section class="pages group">
                 <article class="page yesterday">
-                    <h2 class="properties-title">What Happened?</h2>
+                    <h2 class="properties-title"><span>What Happened?</span></h2>
                 </article>
 
                 <article class="page properties">
-                    <h2 class="properties-title">My Property</h2>
+                    <h2 class="properties-title"><span>My Property</span></h2>
 
                     <ul class="my-properties group">
                         <li class="property">
@@ -43,7 +43,7 @@
                         <li class="property">
                             <a href="#" class="property-link">
                                 <i class="property-icon icon-gold"></i>
-                                <h3 class="property-title">Gold</h3>
+                                <h3 class="property-title">Gold (Ons)</h3>
                             </a>
                             <input type="number" class="property-input" />
                             <span class="property-amount"></span>
@@ -52,7 +52,7 @@
                         <li class="property">
                             <a href="#" class="property-link">
                                 <i class="property-icon icon-coffeebean"></i>
-                                <h3 class="property-title">Coffee Bean</h3>
+                                <h3 class="property-title">Cocoa (Tonne)</h3>
                             </a>
                             <input type="number" class="property-input" />
                             <span class="property-amount"></span>
@@ -70,7 +70,7 @@
                         <li class="property">
                             <a href="#" class="property-link">
                                 <i class="property-icon icon-new-york"></i>
-                                <h3 class="property-title">NYSE</h3>
+                                <h3 class="property-title">NYSE (100)</h3>
                             </a>
                             <input type="number" class="property-input" />
                             <span class="property-amount"></span>
@@ -88,7 +88,7 @@
                 </article>
 
                 <article class="page tomorrow">
-                    <h2 class="properties-title">What Could Happen?</h2>
+                    <h2 class="properties-title"><span>What Could Happen?</span></h2>
                 </article>
             </section>
         </div>

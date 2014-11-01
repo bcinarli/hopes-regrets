@@ -6,8 +6,10 @@
 .pages {
     @include app-transition();
     position: absolute;
+    top: 0;
     left: -100%;
     @include dims(300%, 100%);
+    padding-top: 100px;
 
     &.on-yesterday {
         left: 0;
