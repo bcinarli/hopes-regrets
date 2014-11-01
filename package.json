@@ -1,0 +1,32 @@
+{
+  "name": "Ne-Halt-Ettim",
+  "version": "0.0.0",
+  "description": "kesintiVar ==========",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "private": "true",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/bcinarli/ne-halt-ettim.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bcinarli/ne-halt-ettim/issues"
+  },
+  "homepage": "https://github.com/bcinarli/ne-halt-ettim",
+  "devDependencies": {
+    "grunt": "~0.4.0",
+    "grunt-contrib-copy": "^0.7.0",
+    "grunt-contrib-cssmin": "*",
+    "grunt-contrib-htmlmin": "^0.3.0",
+    "grunt-contrib-sass": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-cssc": "*",
+    "grunt-htmlhint": "*",
+    "matchdep": "*"
+  }
+}

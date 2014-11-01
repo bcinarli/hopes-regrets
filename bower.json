@@ -1,0 +1,19 @@
+{
+  "name": "Ne Halt Ettim",
+  "version": "0.0.0",
+  "authors": [
+    "Senguller"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "Melange": "~0.2.0-alpha"
+  }
+}
