@@ -29,10 +29,14 @@
                     <div class="graph yesterday-graph">
                         <canvas id="yesterday-chart" height="355"></canvas>
 
-                        <span class="switches group">
-                            <span class="switch-left switched">Donut</span>
-                            <span class="switch-right">Radar</span>
-                        </span>
+                        <label>
+                            Donut
+                            <input type="checkbox" class="switch" checked />
+                            <div class="switch-button">
+                                <div class="switch-knob"></div>
+                            </div>
+                            Radar
+                        </label>
                     </div>
                 </article>
 
