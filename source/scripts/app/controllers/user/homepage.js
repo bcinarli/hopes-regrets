@@ -43,9 +43,32 @@
             $scope.settings.currentPage = (currentPage - 1 === 0 ? 1 : currentPage - 1);
         };
 
-        // Go to page num.
-        $scope.goToPage = function(pageNum){
-            $scope.settings.currentPage = pageNum;
+        // Keep input states.
+        $scope.inputStates = [];
+        $scope.model = {
+            cash    : null,
+            exchange: null,
+            gold    : null,
+            nyse    : null,
+            coffee  : null,
+            estate  : null
+        };
+        var modelMap = ["cash", "gold", "coffee", "exchange", "nyse", "estate"];
+
+        var lastClicked = 0;
+        // Show input of element.
+        $scope.toggleInput = function(inputNum){
+            $scope.inputBlur(lastClicked);
+            lastClicked = inputNum;
+            $scope.inputStates[inputNum] = !$scope.inputStates[inputNum];
+        };
+
+        // On input blur.
+        $scope.inputBlur = function(inputNum){
+            var value = $scope.model[modelMap[inputNum]];
+            if(value === 0 || typeof value === "undefined" || value === null){
+                $scope.inputStates[inputNum] = false;
+            }
         };
     };
 
