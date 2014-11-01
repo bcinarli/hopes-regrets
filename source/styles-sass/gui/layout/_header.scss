@@ -4,7 +4,11 @@
     Header
     ------------------------------------------- **/
 .profile {
+    position: absolute;
+    top: 50%;
+    left: 50%;
     @include dims(64px);
+    margin: -32px 0 0 -32px;
 }
 
 .profile-link {
@@ -15,23 +19,4 @@
     @include dims(64px);
     border: 3px solid #fff;
     border-radius: 50%;
-}
-
-.navigate-day {
-    padding: 0 $base-gutter;
-    @include font-size(20px);
-    color: #fff;
-    text-decoration: none;
-
-    i {
-        vertical-align: middle;
-    }
-}
-
-.navigate-yesterday {
-    //align-self: flex-start;
-}
-
-.navigate-tomorrow {
-    //align-self: flex-end;
 }

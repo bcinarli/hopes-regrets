@@ -6,6 +6,7 @@
 .pages {
     @include app-transition();
     position: relative;
+    left: -100%;
     @include dims(300%, 100%);
 
     &.on-yesterday {

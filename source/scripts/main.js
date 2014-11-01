@@ -1,5 +1,5 @@
 // Vendors
-//@codekit-append "../../bower_components/jquery/dist/jquery.js"
+// @codekit-append "../../bower_components/jquery/dist/jquery.js"
 //@codekit-append "../../bower_components/angular/angular.js"
 //@codekit-append "../../bower_components/angular-cookies/angular-cookies.js"
 //@codekit-append "../../bower_components/angular-resource/angular-resource.js"

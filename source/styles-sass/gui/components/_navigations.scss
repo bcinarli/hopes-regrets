@@ -1,0 +1,27 @@
+/* @author Bilal Cinarli */
+
+/** -------------------------------------------
+ 
+    ------------------------------------------- **/
+.navigate-day {
+    position: absolute;
+    top: 50%;
+    padding: 0 $base-gutter;
+    margin-top: -15px;
+    @include font-size(20px);
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+
+    i {
+        vertical-align: middle;
+    }
+}
+
+.navigate-yesterday {
+    left: 0;
+}
+
+.navigate-tomorrow {
+    right: 0;
+}

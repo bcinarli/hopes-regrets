@@ -5,6 +5,7 @@
     ------------------------------------------- **/
 .page-wrap {
     position: relative;
+    overflow-x: hidden;
     min-height: 100%;
 
     &:after {
@@ -16,10 +17,7 @@
 
 .page-header {
     @include app-transition();
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    position: fixed;
     @include dims(100%, 100px);
     background: #{map_get($colors, 'blue')} center no-repeat;
 }

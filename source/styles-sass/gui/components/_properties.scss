@@ -13,7 +13,6 @@
 }
 
 .property {
-    position: relative;
     padding: $base-gutter;
     margin-bottom: $base-gutter;
     list-style: none;
@@ -21,18 +20,34 @@
 }
 
 .property-link {
+    display: block;
     color: #222;
     text-decoration: none;
-
-    &:active + .property-input {
-        display: block;
-    }
 }
 
 .property-icon {
     @include font-size(40px);
+
+    &.icon-money {
+        color: green;
+    }
+
+    &.icon-gold {
+        color: gold;
+    }
 }
 
-.property-input {
+input.property-input {
     display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    @include dims(200px, 50px);
+    border: 10px solid rgba(0, 0, 0, .4);
+    margin: -25px 0 0 -100px;
+    border-radius: 5px;
+
+    .property-selected & {
+        display: block;
+    }
 }
