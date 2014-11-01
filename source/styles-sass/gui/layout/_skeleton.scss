@@ -18,10 +18,15 @@
 .page-header {
     @include app-transition();
     position: fixed;
+    z-index: 99;
     @include dims(100%, 100px);
     background: #{map_get($colors, 'blue')} center no-repeat;
 }
 
 .page-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include dims(100%);
     padding-top: 100px;
 }

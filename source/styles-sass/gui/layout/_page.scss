@@ -5,7 +5,7 @@
     ------------------------------------------- **/
 .pages {
     @include app-transition();
-    position: relative;
+    position: absolute;
     left: -100%;
     @include dims(300%, 100%);
 
