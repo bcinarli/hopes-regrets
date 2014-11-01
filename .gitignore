@@ -7,3 +7,7 @@ node_modules
 
 # Build
 public
+
+*.codekit
+
+npm-debug.log

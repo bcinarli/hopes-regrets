@@ -15,15 +15,15 @@ module.exports = function(grunt) {
         path.assets      = path.public  + "assets/";
         path.html        = path.source  + "html/";
         path.templates   = path.source  + "templates/";
-        path.js          = path.source  + "script/";
-        path.css         = path.source  + "sass/";
+        path.js          = path.source  + "scripts/";
+        path.css         = path.source  + "styles-sass/";
         path.fonts       = path.source  + "fonts/";
         path.img         = path.source  + "images/";
-        path.build_js    = path.assets  + "js/";
-        path.build_css   = path.assets  + "css/";
+        path.build_js    = path.assets  + "scripts/";
+        path.build_css   = path.assets  + "styles/";
         path.build_tpl   = path.assets  + "tpl/";
         path.build_fonts = path.assets  + "fonts/";
-        path.build_img   = path.assets  + "img/";
+        path.build_img   = path.assets  + "images/";
         path.build_html  = path.assets;
 
     // Htmlhint config.
