@@ -45,13 +45,13 @@
 
         // Keep input states.
         $scope.model = {
-            active      : null,
-            cash        : null,
-            gold        : null,
-            cocoa       : null,
-            exchange    : null,
-            nyse        : null,
-            estate      : null
+            active      : "",
+            cash        : "",
+            gold        : "",
+            cocoa       : "",
+            exchange    : "",
+            nyse        : "",
+            estate      : ""
         };
 
         // Show input setting.
@@ -71,6 +71,7 @@
             lastClicked = inputNum;
             $scope.settings.showInput = true;
             $scope.settings.inputIndex = inputNum;
+            $scope.model.active = $scope.model[modelMap[lastClicked]];
         };
 
         $scope.closeInput = function(){

@@ -31,7 +31,7 @@
                     <i class="property-icon icon-coffeebean"></i>
                     <h3 class="property-title">Cocoa (Tonne)</h3>
                 </a>
-                <span class="property-amount" ng-show="model.cocoa">${{model.coffee * 2358 | number}}</span>
+                <span class="property-amount" ng-show="model.cocoa">${{model.cocoa * 2358 | number}}</span>
             </li>
 
             <li class="property">
