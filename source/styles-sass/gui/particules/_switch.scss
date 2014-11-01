@@ -1,0 +1,56 @@
+/* @author Bilal Cinarli */
+
+/** -------------------------------------------
+    Switch
+    ------------------------------------------- **/
+.switches {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    border: 1px solid #222;
+    border-radius: 20px;
+    white-space: nowrap;
+    @include font-size(14px);
+}
+
+[class*="switch-"] {
+    position: relative;
+    display: block;
+    float: left;
+    padding: 5px 10px;
+
+    &:before {
+        @include app-transition();
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: "";
+        opacity: .5;
+        @include dims(100%);
+        background-color: #808080;
+    }
+
+    &.switched {
+        &:before {
+            background-color: green;
+        }
+    }
+}
+
+.switch-left {
+    border-radius: 20px 0 0 20px;
+
+    &:before,
+    &:after {
+        border-radius: 20px 0 0 20px;
+    }
+}
+
+.switch-right {
+    border-radius: 0 20px 20px 0;
+
+    &:before,
+    &:after {
+        border-radius: 0 20px 20px 0;
+    }
+}

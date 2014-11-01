@@ -28,6 +28,11 @@
 
                     <div class="graph yesterday-graph">
                         <canvas id="yesterday-chart" height="355"></canvas>
+
+                        <span class="switches group">
+                            <span class="switch-left switched">Donut</span>
+                            <span class="switch-right">Radar</span>
+                        </span>
                     </div>
                 </article>
 
@@ -102,7 +107,7 @@
     </footer>
     <script src="./../assets/scripts/main.min.js"></script>
     <script>
-        var data = [
+        var data1 = [
             {
                 value: 300,
                 color:"#343838",
@@ -166,7 +171,7 @@
         };
 
 
-        data = {
+        var data2 = {
             labels: ["Cash", "Gold", "Cocoa", "Exchange", "NYSE", "Real Estate"],
             datasets: [
                 {
@@ -184,7 +189,13 @@
 
         // For a pie chart
         var yesterdayCanvas = document.getElementById("yesterday-chart").getContext("2d");
-        var yesterdayChart = new Chart(yesterdayCanvas).Radar(data, options);
+        var yesterdayChart = new Chart(yesterdayCanvas).Radar(data2, options);
+
+        $(function(){
+           $(".switches span").on('click', function(){
+               $(this).parent().find('span').toggleClass('switched');
+           });
+        });
     </script>
 </body>
 </html>
