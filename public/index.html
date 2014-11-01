@@ -8,12 +8,12 @@
     </head>
     <body ng-controller="bnheSystemCtrl">
         <!-- Page Wrapper -->
-        <div id="wrapper" class="page-wrap">
+        <div id="wrapper" class="page-wrap" ng-click="tapScreen()" ng-swipe-left="swipeLeft()" ng-swipe-right="swipeRight()">
             <!-- Header -->
             <div ng-include src="'assets/templates/layout/header.tpl'"></div>
 
             <!-- Main Content -->
-            <div id="main" class="page-content" ng-class="{loading: settings.content_loading}">
+            <div id="main" class="page-content" ng-class="{'loading-view': settings.content_loading}">
                 <div ng-hide="settings.page_loading || settings.content_loading" ng-view></div>
             </div>
         </div>

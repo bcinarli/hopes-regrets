@@ -21,6 +21,15 @@
                 route       : "welcome",
                 controller  : "bnheWelcomeCtrl",
                 templateUrl : "welcome.tpl"
+            },
+            {
+                id          : 2,
+                auth        : 0,
+                order       : 0,
+                type        : "user",
+                route       : "homepage",
+                controller  : "bnheHomepageCtrl",
+                templateUrl : "homepage.tpl"
             }
         ];
 

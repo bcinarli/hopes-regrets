@@ -20,6 +20,11 @@
             page_loading    : false,
             content_loading : false
         };
+
+        // Touch events.
+        $scope.tapScreen    = function(){  };
+        $scope.swipeLeft    = function(){  };
+        $scope.swipeRight   = function(){  };
     };
 
     // Register controller.

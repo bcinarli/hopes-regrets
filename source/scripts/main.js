@@ -18,6 +18,7 @@
 // - Controllers
 //@codekit-append "app/controllers/system.js"
 //@codekit-append "app/controllers/guest/welcome.js"
+//@codekit-append "app/controllers/user/homepage.js"
 
 // - Services
 

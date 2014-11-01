@@ -20,7 +20,7 @@
     BNHE.modules.directives   = angular.module("BNHE.Directives"    , []);
     BNHE.modules.services     = angular.module("BNHE.Services"      , ["ngResource", "ngCookies"]);
     BNHE.modules.routes       = angular.module("BNHE.Routes"        , ["ngRoute"]);
-    BNHE.modules.app          = angular.module("BenNeHaltEttim"     , ["BNHE.System", "BNHE.Controllers", "BNHE.Filters", "BNHE.Directives", "BNHE.Services", "BNHE.Routes"]);
+    BNHE.modules.app          = angular.module("BenNeHaltEttim"     , ["BNHE.System", "BNHE.Controllers", "BNHE.Filters", "BNHE.Directives", "BNHE.Services", "BNHE.Routes", "ngTouch"]);
 
     // Configs.
     // Default Configs

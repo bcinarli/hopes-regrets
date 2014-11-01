@@ -9,20 +9,19 @@
         controllers = BNHE.modules.controllers;
 
     // Controller function.
-    var Controller = function($scope, $timeout, bnheRoute){
+    var Controller = function($scope, $timeout){
 
-        // Start page loading.
-        $scope.settings.page_loading = true;
-        $scope.settings.content_loading = false;
+        // Stop page loading.
+        $scope.settings.page_loading = false;
 
         // Fake delay.
         $timeout(function(){
             // Redirect to main page.
-            bnheRoute.redirectRouteById(2);
-        }, 2000);
+            $scope.settings.content_loading = true;
+        }, 500);
     };
 
     // Register controller.
-    controllers.controller("bnheWelcomeCtrl", ["$scope", "$timeout", "bnheRoute", Controller]);
+    controllers.controller("bnheHomepageCtrl", ["$scope", "$timeout", Controller]);
 
 })(window);
