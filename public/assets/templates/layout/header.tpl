@@ -3,7 +3,7 @@
 
     <div class="profile">
         <a ng-click="settings.currentPage = 2" class="profile-link">
-            <img src="./../assets/images/me.jpg" class="profile-photo" />
+            <img src="assets/images/me.jpg" class="profile-photo" />
         </a>
     </div>
 
