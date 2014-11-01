@@ -35,7 +35,7 @@
     position: relative;
     float: left;
     width: 40%;
-    padding: 0;
+    padding: 0 0 12px;
     margin: (1*$base-gutter) 5%;
     @include font-size(14px);
     list-style: none;
@@ -67,14 +67,19 @@
     &.icon-coffeebean {
         color: saddlebrown;
     }
+
+    &.icon-new-york {
+        color: darkblue;
+    }
 }
 
 .property-amount {
     position: absolute;
     bottom: 0;
     left: 0;
-    @include dims(100%, 30px);
+    @include dims(100%, 24px);
     @include font-size(13px);
+    line-height: 24px;
     text-align: center;
 }
 
@@ -91,11 +96,11 @@
     background: rgba(0, 0, 0, .3);
 
     &.top-line {
-        margin-top: -200px;
+        margin-top: -190px;
     }
 
     &.middle-line {
-        margin-top: -120px;
+        margin-top: -90px;
     }
 }
 
