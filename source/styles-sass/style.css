@@ -1907,9 +1907,13 @@ dl dt {
     Skeleton
     ------------------------------------------- **/
 .page-wrap {
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
   overflow-x: hidden;
-  min-height: 100%;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
 }
 .page-wrap:after {
   content: " ";
@@ -1921,6 +1925,8 @@ dl dt {
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
   position: fixed;
+  top: 0;
+  left: 0;
   z-index: 99;
   width: 100%;
   height: 100px;
@@ -2148,21 +2154,21 @@ dl dt {
 
 .property-amount-holder {
   position: absolute;
-  top: 50%;
+  top: 200px;
   left: 50%;
   z-index: 99;
   width: 300px;
   height: 60px;
   padding: 8px;
-  margin: -60px 0 0 -150px;
+  margin-left: -150px;
   border-radius: 10px;
   background: rgba(0, 0, 0, 0.3);
 }
 .property-amount-holder.top-line {
-  margin-top: -190px;
+  top: 50px;
 }
 .property-amount-holder.middle-line {
-  margin-top: -90px;
+  top: 150px;
 }
 
 .property-amount-submit {
@@ -2211,6 +2217,7 @@ input.property-input {
   transition: all 0.4s ease;
   position: relative;
   top: -300px;
+  -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
   width: 90%;
   padding: 20px 10px 10px;
@@ -2220,6 +2227,7 @@ input.property-input {
 }
 .pushed .push-notification {
   top: 50%;
+  -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
   left: 5%;
 }
