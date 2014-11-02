@@ -39,10 +39,19 @@
             legendTemplate : "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<segments.length; i++){%><li><span style=\"background-color:<%=segments[i].fillColor%>\"></span><%if(segments[i].label){%><%=segments[i].label%><%}%></li><%}%></ul>"
         };
 
+        var multipliers = {
+            cash    : 1,
+            gold    : 1172,
+            cocoa   : 2358,
+            exchange: 1,
+            nyse    : 1,
+            estate  : 1
+        };
+
         var yesterdayPercents = {
             cash    : -0.2,
-            gold    : 1172 * 0.4,
-            cocoa   : 2358 * -0.05,
+            gold    : 0.4,
+            cocoa   : -0.05,
             exchange: 0.1,
             nyse    : 0.1,
             estate  : -0.05
@@ -50,8 +59,8 @@
 
         var tomorrowPercents = {
             cash    : 0.3,
-            gold    : 1172 * 0.3,
-            cocoa   : 2358,
+            gold    : 0.3,
+            cocoa   : 1,
             exchange: -0.1,
             nyse    : 0.2,
             estate  : -0.3
@@ -82,7 +91,7 @@
             ]
         };
 
-        var pieDataColors = ["#343838", "#005F6B", "#008C9E", "#00B4CC", "#76D3DE"];
+        var pieDataColors = ["#5b90bf", "#96b5b4", "#a3be8c", "#ab7967", "#d08770", "#b48ead"];
 
         var chart = null;
 
@@ -100,12 +109,14 @@
 
             ctrl.initRadar = $rootScope.initRadar = function(){
                 resizeCanvas();
+                if(chart && chart.destroy) chart.destroy();
                 chart = new Chart(ctrl.canvas).Radar(ctrl.radarData, pluginOptions);
             };
 
             ctrl.initPie = $rootScope.initPie = function(force){
                 if(force) $scope.model.chartType = false;
                 resizeCanvas();
+                if(chart && chart.destroy) chart.destroy();
                 chart = new Chart(ctrl.canvas).Doughnut(ctrl.pieData, pluginOptions);
             };
 
@@ -114,12 +125,12 @@
 
                 var modelData = {};
 
-                modelData.cash      = _.isNumber(parseInt($scope.model.cash, 10))      ? $scope.model.cash      : 0;
-                modelData.gold      = _.isNumber(parseInt($scope.model.gold, 10))      ? $scope.model.gold      : 0;
-                modelData.cocoa     = _.isNumber(parseInt($scope.model.cocoa, 10))     ? $scope.model.cocoa     : 0;
-                modelData.exchange  = _.isNumber(parseInt($scope.model.exchange, 10))  ? $scope.model.exchange  : 0;
-                modelData.nyse      = _.isNumber(parseInt($scope.model.nyse, 10))      ? $scope.model.nyse      : 0;
-                modelData.estate    = _.isNumber(parseInt($scope.model.estate, 10))    ? $scope.model.estate    : 0;
+                modelData.cash      = _.isNumber(parseInt($scope.model.cash, 10))      ? $scope.model.cash      * multipliers.cash      : 0;
+                modelData.gold      = _.isNumber(parseInt($scope.model.gold, 10))      ? $scope.model.gold      * multipliers.gold      : 0;
+                modelData.cocoa     = _.isNumber(parseInt($scope.model.cocoa, 10))     ? $scope.model.cocoa     * multipliers.cocoa     : 0;
+                modelData.exchange  = _.isNumber(parseInt($scope.model.exchange, 10))  ? $scope.model.exchange  * multipliers.exchange  : 0;
+                modelData.nyse      = _.isNumber(parseInt($scope.model.nyse, 10))      ? $scope.model.nyse      * multipliers.nyse      : 0;
+                modelData.estate    = _.isNumber(parseInt($scope.model.estate, 10))    ? $scope.model.estate    * multipliers.estate    : 0;
 
                 var _radarData = {
                     labels: [],
@@ -129,11 +140,14 @@
                 var _pieData = [];
 
                 var i = 0;
+                var calculatedTotal = 0;
                 _.each(modelData, function(value, key){
-                    var value = modelData[key] + (percents[key] * modelData[key]),
+                    var numModeldata = parseInt(modelData[key], 10);
+                    var value = numModeldata + (percents[key] * numModeldata),
                         name  = radarDataMap[key];
 
                     var numValue = parseInt(value, 10) | 0;
+                    calculatedTotal += numValue;
 
                     _radarData.labels.push(name);
                     _radarData.datasets[0].data.push(numValue);
@@ -148,6 +162,8 @@
 
                 ctrl.pieData = _pieData;
                 ctrl.radarData = _radarData;
+
+                $scope.model.amount = (calculatedTotal - (modelData.cash + modelData.gold + modelData.cocoa + modelData.exchange + modelData.nyse + modelData.estate));
 
                 $scope.model.chartType ? ctrl.initRadar() : ctrl.initPie();
             };
