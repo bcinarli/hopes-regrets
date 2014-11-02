@@ -48,10 +48,13 @@
                 $scope.settings.content_loading = false;
 
                 switch(pageNum){
-                    case 1: case 3:
+                    case 1:
                         $rootScope.initPie(true);
                         $scope.settings.recalculate++;
+                        break;
                     case 3:
+                        $rootScope.initPie(true);
+                        $scope.settings.recalculate++;
                         $timeout(function(){
                             $scope.settings.pushed = true;
                         }, 5000);
