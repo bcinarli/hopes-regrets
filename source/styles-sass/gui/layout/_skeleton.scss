@@ -9,6 +9,7 @@
     left: 0;
     overflow-x: hidden;
     @include dims(100%);
+    background-color: #fff;
 
     &:after {
         content: " ";

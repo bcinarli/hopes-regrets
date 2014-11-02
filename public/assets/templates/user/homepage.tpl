@@ -11,7 +11,7 @@
         <h2 class="properties-title"><span>My Property</span></h2>
 
         <div ng-show="settings.showInput" class="property-amount-holder" ng-class="{'top-line': settings.inputIndex === 3 || settings.inputIndex === 4, 'middle-line': settings.inputIndex === 5 || settings.inputIndex === 6}">
-            <input ng-model="model.active" type="number" class="property-input" />
+            <input ng-model="model.active" type="tel" class="property-input" id="property-input" />
             <a ng-click="closeInput()" class="property-amount-submit">OK</a>
         </div>
 
