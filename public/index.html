@@ -3,7 +3,7 @@
     <head lang="en">
         <meta charset="UTF-8">
         <title>Ben Ne Halt Ettim</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, target-densityDpi=device-dpi">
         <link rel="stylesheet" href="assets/styles/style.css" />
     </head>
     <body ng-controller="bnheSystemCtrl">
@@ -32,5 +32,14 @@
 
         <!-- App Script -->
         <script src="assets/scripts/main.min.js"></script>
+        <script>
+            $(function(){
+                $(document).on('blur', 'input, textarea', function() {
+                    setTimeout(function() {
+                        window.scrollTo(document.body.scrollLeft, document.body.scrollTop);
+                    }, 0);
+                });
+            });
+        </script>
     </body>
 </html>

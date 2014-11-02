@@ -4,9 +4,11 @@
     Skeleton
     ------------------------------------------- **/
 .page-wrap {
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
     overflow-x: hidden;
-    min-height: 100%;
+    @include dims(100%);
 
     &:after {
         content: " ";
@@ -18,6 +20,8 @@
 .page-header {
     @include app-transition();
     position: fixed;
+    top: 0;
+    left: 0;
     z-index: 99;
     @include dims(100%, 100px);
     background: #{map_get($colors, 'blue')} center no-repeat;

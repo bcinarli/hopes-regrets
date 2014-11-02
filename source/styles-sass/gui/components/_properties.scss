@@ -86,21 +86,21 @@
 
 .property-amount-holder {
     position: absolute;
-    top: 50%;
+    top: 200px;
     left: 50%;
     z-index: 99;
     @include dims(300px, 60px);
     padding: 8px;
-    margin: -60px 0 0 -150px;
+    margin-left: -150px;
     border-radius: 10px;
     background: rgba(0, 0, 0, .3);
 
     &.top-line {
-        margin-top: -190px;
+        top: 50px;
     }
 
     &.middle-line {
-        margin-top: -90px;
+        top: 150px;
     }
 }
 

@@ -20,6 +20,7 @@
     @include app-transition();
     position: relative;
     top: -300px;
+    -webkit-transform: rotate(-45deg);
     transform: rotate(-45deg);
     width: 90%;
     padding: 2*$base-gutter $base-gutter $base-gutter;
@@ -29,6 +30,7 @@
 
     .pushed & {
         top: 50%;
+        -webkit-transform: translateY(-50%);
         transform: translateY(-50%);
         left: 5%;
     }
