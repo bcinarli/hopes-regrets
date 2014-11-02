@@ -4,24 +4,19 @@
     Notifications
     ------------------------------------------- **/
 .notification {
-    display: none;
     position: absolute;
     top: 0;
     left: 0;
     z-index: 101;
     @include dims(100%);
     background-color: rgba(255, 255, 255, .2);
-
-    .pushed & {
-        display: block;
-    }
 }
 
 .push-notification {
     @include app-transition();
     position: relative;
     top: -300px;
-    @include transform(rotate(-45deg));
+    transform: rotate(-45deg);
     width: 90%;
     padding: 2*$base-gutter $base-gutter $base-gutter;
     border-radius: 6px;
@@ -30,7 +25,7 @@
 
     .pushed & {
         top: 50%;
-        @include transform(translateY(-50%));
+        transform: translateY(-50%);
         left: 5%;
     }
 
