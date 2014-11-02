@@ -22,7 +22,7 @@
         </header>
 
         <div id="main" class="page-content">
-            <section class="pages group on-yesterday">
+            <section class="pages group on-tomorrow">
                 <article class="page yesterday">
                     <h2 class="properties-title"><span>What Happened?</span></h2>
 
@@ -101,8 +101,29 @@
 
                 <article class="page tomorrow">
                     <h2 class="properties-title"><span>What Could Happen?</span></h2>
+
+                    <div class="graph tomorrow-graph">
+                        <canvas id="tomorrow-chart" height="355"></canvas>
+
+                        <label>
+                            Donut
+                            <input type="checkbox" class="switch" />
+                            <div class="switch-button">
+                                <div class="switch-knob"></div>
+                            </div>
+                            Radar
+                        </label>
+                    </div>
                 </article>
             </section>
+        </div>
+
+        <div class="notification">
+            <div class="push-notification">
+                <p>Önümüzdeki günlerde altın iyi bir yatırım aracı olabilir. ING Bank birikimli altın hesabını denemek ister misiniz?</p>
+                <a href="#" class="primary-action">İlgileniyorum</a>
+                <a href="#" class="button">İlgilenmiyorum</a>
+            </div>
         </div>
     </div>
 
@@ -194,6 +215,9 @@
         // For a pie chart
         var yesterdayCanvas = document.getElementById("yesterday-chart").getContext("2d");
         var yesterdayChart = new Chart(yesterdayCanvas).Radar(data2, options);
+
+        var tomorrowCanvas = document.getElementById("tomorrow-chart").getContext("2d");
+        var tomorrowChart = new Chart(tomorrowCanvas).Doughnut(data1, options);
 
         $(function(){
            $(".switches span").on('click', function(){

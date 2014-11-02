@@ -1,0 +1,61 @@
+/* @author Bilal Cinarli */
+
+/** -------------------------------------------
+    Notifications
+    ------------------------------------------- **/
+.notification {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 101;
+    @include dims(100%);
+    background-color: rgba(255, 255, 255, .2);
+
+    .pushed & {
+        display: block;
+    }
+}
+
+.push-notification {
+    @include app-transition();
+    position: relative;
+    top: -300px;
+    @include transform(rotate(-45deg));
+    width: 90%;
+    padding: 2*$base-gutter $base-gutter $base-gutter;
+    border-radius: 6px;
+    background-color: #fff;
+    box-shadow: 0 0 6px rgba(0, 0, 0, .3);
+
+    .pushed & {
+        top: 50%;
+        @include transform(translateY(-50%));
+        left: 5%;
+    }
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        @include dims(100%, 12px);
+        background-color: #{map_get($colors, 'blue')};
+        border-radius: 6px 6px 0 0;
+    }
+
+    .primary-action,
+    .button {
+        display: block;
+        @include dims(80%, 30px);
+        margin: 5px 0 0 10%;
+        padding: 0;
+        border-radius: 9999px;
+        line-height: 30px;
+    }
+
+    .button {
+        border: 1px solid #{map_get($colors, 'blue')};
+        background-color: #fff;
+    }
+}
