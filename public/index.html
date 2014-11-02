@@ -8,13 +8,22 @@
     </head>
     <body ng-controller="bnheSystemCtrl">
         <!-- Page Wrapper -->
-        <div id="wrapper" class="page-wrap">
+        <div id="wrapper" class="page-wrap" ng-class="{'pushed': settings.pushed}">
             <!-- Header -->
             <div ng-include src="'assets/templates/layout/header.tpl'"></div>
 
             <!-- Main Content -->
-            <div id="main" class="page-content" ng-class="{'loading-view': settings.content_loading}" ng-swipe-left="swipeLeft()" ng-swipe-right="swipeRight()">
+            <div id="main" class="page-content" ng-swipe-left="swipeLeft()" ng-swipe-right="swipeRight()">
                 <div ng-show="settings.show_content" ng-view></div>
+            </div>
+
+            <!-- Notification -->
+            <div class="notification">
+                <div class="push-notification">
+                    <p>Önümüzdeki günlerde altın iyi bir yatırım aracı olabilir. ING Bank birikimli altın hesabını denemek ister misiniz?</p>
+                    <a ng-click="settings.pushed = false" class="primary-action">İlgileniyorum</a>
+                    <a ng-click="settings.pushed = false" class="button">İlgilenmiyorum</a>
+                </div>
             </div>
         </div>
 

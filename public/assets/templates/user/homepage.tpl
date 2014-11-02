@@ -1,5 +1,11 @@
 <section class="pages group" ng-class="{'on-yesterday': settings.currentPage === 1, 'on-today': settings.currentPage === 2, 'on-tomorrow': settings.currentPage === 3}">
-    <article class="page yesterday"></article>
+    <article class="page yesterday">
+        <h2 class="properties-title"><span>What Happened?</span></h2>
+
+        <div class="graph yesterday-graph" ng-class="{'loading-view': settings.content_loading}">
+            <div yesterday-chart data-source="model"></div>
+        </div>
+    </article>
 
     <article class="page properties">
         <h2 class="properties-title"><span>My Property</span></h2>
@@ -9,7 +15,7 @@
             <a ng-click="closeInput()" class="property-amount-submit">OK</a>
         </div>
 
-        <ul class="my-properties">
+        <ul class="my-properties" ng-class="{'loading-view': settings.content_loading}">
             <li class="property">
                 <a ng-click="toggleInput(1)" class="property-link">
                     <i class="property-icon icon-money"></i>
@@ -60,5 +66,11 @@
         </ul>
     </article>
 
-    <article class="page tomorrow"></article>
+    <article class="page tomorrow">
+        <h2 class="properties-title"><span>What Could Happen?</span></h2>
+
+        <div class="graph tomorrow-graph" ng-class="{'loading-view': settings.content_loading}">
+            <div yesterday-chart data-source="model"></div>
+        </div>
+    </article>
 </section>

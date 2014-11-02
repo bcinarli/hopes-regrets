@@ -25,6 +25,7 @@
 
 
 // - Directives
+//@codekit-append "app/directives/yesterday-chart.js"
 
 
 // - Filters

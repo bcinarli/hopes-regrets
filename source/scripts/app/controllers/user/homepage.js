@@ -17,6 +17,7 @@
         // Fake delay.
         $timeout(function(){
             // Redirect to main page.
+            $scope.settings.show_content = true;
             $scope.settings.content_loading = true;
         }, 500);
 
@@ -24,7 +25,6 @@
         $timeout(function(){
             // Redirect to main page.
             $scope.settings.content_loading = false;
-            $scope.settings.show_content = true;
         }, 1000);
 
         // Settings
@@ -36,11 +36,13 @@
         // Touch events.
         $scope.callbacks.swipeLeft = function(){
             var currentPage = $scope.settings.currentPage;
-            $scope.settings.currentPage = (currentPage + 1 > pageCount ? pageCount : currentPage + 1);
+            currentPage = (currentPage + 1 > pageCount ? pageCount : currentPage + 1);
+            $scope.changePage(currentPage);
         };
         $scope.callbacks.swipeRight = function(){
             var currentPage = $scope.settings.currentPage;
-            $scope.settings.currentPage = (currentPage - 1 === 0 ? 1 : currentPage - 1);
+            currentPage = (currentPage - 1 === 0 ? 1 : currentPage - 1);
+            $scope.changePage(currentPage);
         };
 
         // Keep input states.
