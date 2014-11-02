@@ -4,7 +4,6 @@
 
 # Package managers
 bower_components
-node_modules
 
 # Logs
 npm-debug.log
