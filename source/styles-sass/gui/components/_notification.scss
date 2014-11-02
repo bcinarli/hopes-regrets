@@ -5,11 +5,15 @@
     ------------------------------------------- **/
 .notification {
     position: absolute;
-    top: 0;
+    top: -100%;
     left: 0;
     z-index: 101;
     @include dims(100%);
     background-color: rgba(255, 255, 255, .2);
+
+    .pushed & {
+        top: 0;
+    }
 }
 
 .push-notification {
