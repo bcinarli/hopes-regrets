@@ -1,0 +1,25 @@
+/* @author Bilal Cinarli */
+
+/** -------------------------------------------
+    Graph
+    ------------------------------------------- **/
+.graph {
+    > label {
+        float: left;
+    }
+
+    .total-change {
+        float: right;
+    }
+}
+
+.total-change {
+    .amount {
+        font-weight: bold;
+        color: green;
+    }
+
+    .negative-amount {
+        color: darkred;
+    }
+}

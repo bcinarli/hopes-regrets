@@ -22,7 +22,7 @@
         </header>
 
         <div id="main" class="page-content">
-            <section class="pages group on-tomorrow">
+            <section class="pages group on-yesterday">
                 <article class="page yesterday">
                     <h2 class="properties-title"><span>What Happened?</span></h2>
 
@@ -37,6 +37,8 @@
                             </div>
                             Radar
                         </label>
+
+                        <span class="total-change">Difference: <span class="amount negative-amount">$300</span></span>
                     </div>
                 </article>
 
@@ -113,6 +115,8 @@
                             </div>
                             Radar
                         </label>
+
+                        <span class="total-change">Difference: <span class="amount">$250</span></span>
                     </div>
                 </article>
             </section>
@@ -132,35 +136,57 @@
     </footer>
     <script src="./../assets/scripts/main.min.js"></script>
     <script>
+        function legend(parent, data) {
+            parent.className = 'legend';
+            var datas = data.hasOwnProperty('datasets') ? data.datasets : data;
+
+            // remove possible children of the parent
+            while(parent.hasChildNodes()) {
+                parent.removeChild(parent.lastChild);
+            }
+
+            datas.forEach(function(d) {
+                var title = document.createElement('span');
+                title.className = 'title';
+                title.style.borderColor = d.hasOwnProperty('strokeColor') ? d.strokeColor : d.color;
+                title.style.borderStyle = 'solid';
+                parent.appendChild(title);
+
+                var text = document.createTextNode(d.label);
+                title.appendChild(text);
+            });
+        }
+
+
         var data1 = [
             {
                 value: 300,
-                color:"#343838",
+                color:"#5B90BF",
                 label: "Cash"
             },
             {
                 value: 50,
-                color: "#005F6B",
+                color: "#96B5B4",
                 label: "Gold"
             },
             {
                 value: 100,
-                color: "#008C9E",
+                color: "#A3BE8C",
                 label: "Exchange"
             },
             {
                 value: 200,
-                color: "#00B4CC",
+                color: "#AB7967",
                 label: "Cocoa"
             },
             {
                 value: 150,
-                color: "#00DFFC",
+                color: "#D08770",
                 label: "NYSE"
             },
             {
                 value: 20,
-                color: "#76D3DE",
+                color: "#B48EAD",
                 label: "Real Estate"
             }
         ];
@@ -213,7 +239,7 @@
 
         // For a pie chart
         var yesterdayCanvas = document.getElementById("yesterday-chart").getContext("2d");
-        var yesterdayChart = new Chart(yesterdayCanvas).Radar(data2, options);
+        var yesterdayChart = new Chart(yesterdayCanvas).Doughnut(data1, options);
 
         var tomorrowCanvas = document.getElementById("tomorrow-chart").getContext("2d");
         var tomorrowChart = new Chart(tomorrowCanvas).Doughnut(data1, options);
