@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>hopes regrets.xcscheme</key>
+		<key>hopes-regrets.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,12 +12,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>635F0F6F1A194906000D795D</key>
+		<key>63D32F781A19520A0005CE50</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>635F0F841A194906000D795D</key>
+		<key>63D32F8D1A19520A0005CE50</key>
 		<dict>
 			<key>primary</key>
 			<true/>

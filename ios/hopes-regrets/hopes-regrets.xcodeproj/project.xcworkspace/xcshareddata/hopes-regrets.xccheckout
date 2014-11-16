@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>89D239D3-6E69-46A5-986E-69E31E28D694</string>
+	<key>IDESourceControlProjectName</key>
+	<string>hopes-regrets</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>ED4E64B1ED6C554607D7B7BBE2D0797D2E24EA72</key>
+		<string>https://github.com/bcinarli/ne-halt-ettim.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>ios/hopes-regrets/hopes-regrets.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>ED4E64B1ED6C554607D7B7BBE2D0797D2E24EA72</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/bcinarli/ne-halt-ettim.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>ED4E64B1ED6C554607D7B7BBE2D0797D2E24EA72</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>ED4E64B1ED6C554607D7B7BBE2D0797D2E24EA72</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ne-halt-ettim</string>
+		</dict>
+	</array>
+</dict>
+</plist>
